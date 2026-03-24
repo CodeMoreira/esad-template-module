@@ -1,9 +1,17 @@
 /**
- * @format
- */
+ import 'react-native-url-polyfill/auto';
+import process from 'process';
 
-import { AppRegistry } from 'react-native';
+if (typeof global.process === 'undefined') {
+  global.process = process;
+} else {
+  Object.assign(global.process, process);
+}
+
+/** @format */
+
+import {AppRegistry} from 'react-native';
 import App from './App';
-import { name as appName } from './app.json';
+import {name as appName} from './app.json';
 
 AppRegistry.registerComponent(appName, () => App);
