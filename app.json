@@ -1,4 +1,10 @@
 {
   "name": "esad-template-module",
-  "displayName": "esad-template-module"
+  "displayName": "esad-template-module",
+  "expo": {
+    "name": "esad-template-module",
+    "slug": "esad-template-module",
+    "version": "1.0.0",
+    "assetBundlePatterns": ["**/*"]
+  }
 }
