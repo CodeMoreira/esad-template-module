@@ -11,7 +11,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@codemoreira/esad": "^1.2.8",
+    "@codemoreira/esad": "latest",
     "@module-federation/error-codes": "^2.2.3",
     "@module-federation/runtime": "^2.2.3",
     "@module-federation/sdk": "^2.2.3",
