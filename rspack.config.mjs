@@ -15,8 +15,5 @@ export default Repack.defineRspackConfig((env) => {
     type: 'module',
     id: 'esad-template-module',
     dirname: __dirname,
-    exposes: {
-      './Teste': './Teste.tsx',
-    },
   });
 });

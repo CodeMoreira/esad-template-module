@@ -1,27 +1,21 @@
-/**
- * SuperApp Module Entry Point
- */
-
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
-import Teste from './Teste';
+import { View, StyleSheet, SafeAreaView } from 'react-native';
+import { MainScreen } from './src/screens/MainScreen';
+import { Theme } from './src/theme/tokens';
 
-function App() {
-  return (
-    <SafeAreaProvider>
-      <View style={styles.container}>
-        <Teste />
-      </View>
-    </SafeAreaProvider>
-  );
-}
+/**
+ * The local development wrapper.
+ * This file is only the shell used when running the module standalone.
+ * When loaded by the Host, only MainScreen is consumed via Module Federation.
+ */
+const App = () => (
+  <SafeAreaView style={styles.root}>
+    <MainScreen />
+  </SafeAreaView>
+);
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#ffffff',
-  },
+  root: { flex: 1, backgroundColor: Theme.colors.darker },
 });
 
 export default App;
