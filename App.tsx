@@ -1,21 +1,23 @@
 import React from 'react';
-import { View, StyleSheet, SafeAreaView } from 'react-native';
-import { MainScreen } from './src/screens/MainScreen';
-import { Theme } from './src/theme/tokens';
+import { StyleSheet, SafeAreaView } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { ModuleNavigator } from './src/screens/ModuleNavigator';
 
 /**
  * The local development wrapper.
- * This file is only the shell used when running the module standalone.
- * When loaded by the Host, only MainScreen is consumed via Module Federation.
+ * Used ONLY when running the module standalone (esad dev <id>).
+ * When loaded by the Host, only the Navigator is consumed.
  */
 const App = () => (
   <SafeAreaView style={styles.root}>
-    <MainScreen />
+    <NavigationContainer>
+      <ModuleNavigator />
+    </NavigationContainer>
   </SafeAreaView>
 );
 
 const styles = StyleSheet.create({
-  root: { flex: 1, backgroundColor: Theme.colors.darker },
+  root: { flex: 1, backgroundColor: '#fff' },
 });
 
 export default App;
